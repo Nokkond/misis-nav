@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Stage, Sprite } from "@inlet/react-pixi";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Stage width={500} height={500} options={{ backgroundColor: 0xff3860 }}>
+          <Sprite
+              image="https://assets.codepen.io/693612/surya.svg"
+              width={450}
+              height={450}
+              anchor={0.5}
+              position={[250, 250]}
+          />
+      </Stage>
   );
 }
 
